@@ -27,4 +27,29 @@ header .header-name {
           transform: translate(-50%, -50%);
   font-size: 25px;
 }
+
+main {
+  background-color: #effafa;
+  position: relative;
+  height: 80vh;
+}
+
+main .job-filter {
+  width: 100%;
+  height: 10vh;
+  color: #5ba4a4;
+  background-color: #effafa;
+  position: absolute;
+}
+
+main .job-filter span {
+  background-color: #eef6f6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+main .job-posts {
+  padding: 10vh;
+  margin: 0 auto 0 auto;
+}
 /*# sourceMappingURL=style.css.map */

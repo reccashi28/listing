@@ -5,7 +5,10 @@
 }
 
 $primaryBgColor: hsl(180, 29%, 50%);
-
+$lightBgColor: hsl(180, 52%, 96%);
+$filter-tablets: hsl(180, 31%, 95%);
+$dark-bg-color: hsl(180, 8%, 52%);
+$verydark-bg-color: hsl(180, 14%, 20%);
 body {
     color: white;
 }
@@ -25,5 +28,29 @@ header {
         top: 50%;
         transform: translate(-50%, -50%);
         font-size: 25px;
+    }
+}
+
+main {
+    background-color: $lightBgColor;
+    position: relative;
+    height: 80vh;
+    
+    .job-filter {
+        width: 100%;
+        height: 10vh;
+        color: $primaryBgColor;
+        background-color: $lightBgColor;
+        position: absolute;
+        
+        span {
+            background-color: $filter-tablets;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+    .job-posts {
+        padding: 10vh;
+        margin: 0 auto 0 auto;
     }
 }
