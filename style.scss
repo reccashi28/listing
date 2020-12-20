@@ -9,8 +9,10 @@ $lightBgColor: hsl(180, 52%, 96%);
 $filter-tablets: hsl(180, 31%, 95%);
 $dark-bg-color: hsl(180, 8%, 52%);
 $verydark-bg-color: hsl(180, 14%, 20%);
+
 body {
     color: white;
+    background-color: $lightBgColor;
 }
 
 header {
@@ -21,6 +23,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
 
     .header-name {
         position: absolute;
@@ -32,20 +35,27 @@ header {
 }
 
 main {
-    background-color: $lightBgColor;
     position: relative;
-    height: 80vh;
-    
+    height: auto;
+    color: black;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+
     .job-filter {
-        width: 100%;
+        width: 90%;
         height: 10vh;
         color: $primaryBgColor;
         background-color: $lightBgColor;
         position: absolute;
-        
+        border: 2px solid green;
+        padding: 10px;
+        top: -15px;
+        transform: translateY(-25%);
+
         span {
             background-color: $filter-tablets;
-            padding: 10px;
+            // padding: 10px;
             border-radius: 10px;
         }
     }
