@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,MAAM,CAAC;IACH,gBAAgB,EAAE,oCAAoC;GAMzD;EAPD,AAGI,MAHE,CAGF,YAAY,CAAC;IACT,QAAQ,EAAE,QAAQ;IAClB,SAAS,EAAE,IAAI;GAClB",
+    "sources": [
+        "mq.scss"
+    ],
+    "names": [],
+    "file": "mq.css"
+}
