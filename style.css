@@ -34,8 +34,6 @@ main {
   position: relative;
   height: auto;
   color: black;
-  margin: 0 auto;
-  padding: 1rem;
   width: 100%;
 }
 
@@ -47,9 +45,10 @@ main .job-filter {
   position: absolute;
   border: 2px solid green;
   padding: 10px;
-  top: -15px;
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
+  left: 50%;
+  top: -5%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
 }
 
 main .job-filter span {
