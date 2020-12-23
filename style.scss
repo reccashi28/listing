@@ -29,7 +29,7 @@ header {
     .header-name {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 40%;
         transform: translate(-50%, -50%);
         font-size: 25px;
     }
@@ -39,13 +39,13 @@ main {
     position: relative;
     height: auto;
     color: black;
-    // margin: 0 auto;
-    // padding: 1rem;
     width: 100%;
-
+    .container {
+        max-width: 1000px;;
+    }
     .job-filter {        
-        width: 90%;
-        min-height: 100px;
+        min-width: 90%;
+        min-height: 70px;
         height: auto;
         color: $primaryBgColor;
         background-color: white;
