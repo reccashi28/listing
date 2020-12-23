@@ -13,7 +13,8 @@ body {
 header {
   background-color: #5ba4a4;
   position: relative;
-  height: 20vh;
+  min-height: 20vh;
+  height: auto;
   background-image: url("/images/bg-header-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,7 +40,8 @@ main {
 
 main .job-filter {
   width: 90%;
-  height: 10vh;
+  min-height: 100px;
+  height: auto;
   color: #5ba4a4;
   background-color: white;
   position: absolute;
@@ -58,23 +60,29 @@ main .job-filter {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .job-filter .filterbox-content {
-  margin: 5px;
+  margin: 5px 5px;
   background-color: #ddeeee;
-  height: auto;
+  height: 100%;
 }
 
 main .job-filter .filterbox-content span {
-  padding: 6px;
+  margin: 5px;
 }
 
 main .job-filter .filterbox-content .fa-times {
   background-color: #5ba4a4;
   color: white;
-  padding: 0 5px;
+  padding: 5px 10px;
   cursor: pointer;
+  height: 100%;
 }
 
 main .job-filter .filterbox-content .fa-times:hover {
