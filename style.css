@@ -61,18 +61,24 @@ main .job-filter {
 }
 
 main .job-filter .filterbox-content {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px;
   margin: 5px;
   background-color: #ddeeee;
+  height: auto;
+}
+
+main .job-filter .filterbox-content span {
+  padding: 6px;
 }
 
 main .job-filter .filterbox-content .fa-times {
   background-color: #5ba4a4;
   color: white;
   padding: 0 5px;
+  cursor: pointer;
+}
+
+main .job-filter .filterbox-content .fa-times:hover {
+  background-color: darkgreen;
 }
 
 main .job-posts {

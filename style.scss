@@ -59,15 +59,13 @@ main {
         flex-direction: row;
      
         .filterbox-content{
-            // display: flex;
-            // flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 5px;
             margin: 5px;
-            // width: auto;
             background-color: $filter-tablets;
+            height: auto;
+
             span {
                 // height: auto;
+                padding: 6px;
             }
 
             .fa-times {
@@ -75,7 +73,13 @@ main {
                 background-color: $primaryBgColor;
                 color: white;
                 padding: 0 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darkgreen;
+                }
             }
+
         }
     }
     .job-posts {
