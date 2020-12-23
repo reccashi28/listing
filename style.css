@@ -39,11 +39,18 @@ main {
 }
 
 main .container {
-  max-width: 1000px;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
-main .job-filter {
-  min-width: 90%;
+main .container:nth-child(2) {
+  margin-top: 10vh;
+  background-color: green;
+}
+
+main .container .job-filter {
+  min-width: 300px;
   min-height: 70px;
   height: auto;
   color: #5ba4a4;
@@ -52,8 +59,8 @@ main .job-filter {
   padding: 10px;
   left: 50%;
   top: -5%;
-  -webkit-transform: translate(-50%, -5%);
-          transform: translate(-50%, -5%);
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
   -webkit-box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
           box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
   border-radius: 5px;
@@ -69,19 +76,20 @@ main .job-filter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
-main .job-filter .filterbox-content {
-  margin: 5px 5px;
+main .container .job-filter .filterbox-content {
+  margin: 5px 10px;
   background-color: #ddeeee;
   height: 100%;
 }
 
-main .job-filter .filterbox-content span {
+main .container .job-filter .filterbox-content span {
   margin: 5px;
 }
 
-main .job-filter .filterbox-content .fa-times {
+main .container .job-filter .filterbox-content .fa-times {
   background-color: #5ba4a4;
   color: white;
   padding: 5px 10px;
@@ -89,12 +97,20 @@ main .job-filter .filterbox-content .fa-times {
   height: 100%;
 }
 
-main .job-filter .filterbox-content .fa-times:hover {
+main .container .job-filter .filterbox-content .fa-times:hover {
   background-color: darkgreen;
 }
 
-main .job-posts {
-  padding: 10vh;
-  margin: 0 auto 0 auto;
+main .container .job-posts {
+  width: 100%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border-left: 3px solid #5ba4a4;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

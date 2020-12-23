@@ -40,55 +40,71 @@ main {
     height: auto;
     color: black;
     width: 100%;
+
     .container {
-        max-width: 1000px;;
-    }
-    .job-filter {        
-        min-width: 90%;
-        min-height: 70px;
-        height: auto;
-        color: $primaryBgColor;
-        background-color: white;
-        position: absolute;
-        // border: 2px solid green;
-        padding: 10px;
-        left: 50%;
-        top: -5%;
-        transform: translate(-50%, -5%);
-        box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.21);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-     
-        .filterbox-content{
-            margin: 5px 5px;
-            background-color: $filter-tablets;
-            height: 100%;
-
-            span {
-                // height: auto;
-                margin: 5px;
-                // background-color: darkgreen;
-            }
-
-            .fa-times {
-                // height: auto;
-                background-color: $primaryBgColor;
-                color: white;
-                padding: 5px 10px;
-                cursor: pointer;
-                height: 100%;
-                &:hover {
-                    background-color: darkgreen;
-                }
-            }
-
+        width: 90%;
+        max-width: 1240px;
+        margin: 0 auto;
+        &:nth-child(2){
+            margin-top: 10vh;
+            background-color: green;
         }
-    }
-    .job-posts {
-        padding: 10vh;
-        margin: 0 auto 0 auto;
+
+        .job-filter {    
+            min-width: 300px;   
+            min-height: 70px;
+            height: auto;
+            color: $primaryBgColor;
+            background-color: white;
+            position: absolute;
+            // border: 2px solid green;
+            padding: 10px;
+            left: 50%;
+            top: -5%;
+            transform: translate(-50%, -10%);
+            box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.21);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            display: none;
+            .filterbox-content{
+                margin: 5px 10px;
+                background-color: $filter-tablets;
+                height: 100%;
+
+                span {
+                    // height: auto;
+                    margin: 5px;
+                    // background-color: darkgreen;
+                }
+
+                .fa-times {
+                    // height: auto;
+                    background-color: $primaryBgColor;
+                    color: white;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    height: 100%;
+                    
+                    &:hover {
+                        background-color: darkgreen;
+                    }
+                }
+
+            }
+        }      
+    
+        .job-posts {
+            width: 100%;
+            margin: 20px auto;
+            display: flex;
+            background-color: white;
+            padding: 10px;
+            border-left: 3px solid $primaryBgColor;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
     }
 }
