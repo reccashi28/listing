@@ -8,7 +8,6 @@ emptyBox.style.height = `${emptyBoxHeight + 60}px`;
  const resizeBox = () => {
     emptyBoxHeight = filterBox.clientHeight;
     return emptyBox.style.height = `${emptyBoxHeight}px`;
-    console.log(emptyBoxHeight);
  }
 
 window.addEventListener('resize', resizeBox);
