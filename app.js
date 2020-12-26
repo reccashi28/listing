@@ -11,3 +11,19 @@ emptyBox.style.height = `${emptyBoxHeight + 60}px`;
  }
 
 window.addEventListener('resize', resizeBox);
+
+function getJobPosts(){
+
+  let promiseJob = fetch('http://127.0.0.1:5500/data.json');
+
+  let promiseJob2 = promiseJob.then( response => {
+      return response.json();
+   });
+   // console.log(promiseJob2);
+
+   promiseJob2.then(data => {
+      console.log(data);
+   });
+}
+
+getJobPosts();
