@@ -22,7 +22,8 @@ function getJobPosts(){
    // console.log(promiseJob2);
 
    promiseJob2.then(data => {
-      console.log(data);
+      data.map( list => console.log(list));
+      
    });
 }
 
