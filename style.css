@@ -146,5 +146,6 @@ main .container .job-posts .languages ul {
 
 main .container .job-posts .languages ul li {
   list-style-type: none;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
