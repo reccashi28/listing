@@ -45,8 +45,8 @@ function generateHTML(list){
         <div class="content">
           <div class="status">
             <p>${listPost.company}</p>
-            <span class="postNew">${listPost.new ? 'New': ''}</span>
-            <span class="postFeature">${listPost.featured ? 'Featured': ''}</span>
+            <span class="postNew">${listPost.new ? 'NEW': ''}</span>
+            <span class="postFeature">${listPost.featured ? 'FEATURED': ''}</span>
           </div>
           <p class ="company-name">${listPost.position}</p>
           <div class="details">
