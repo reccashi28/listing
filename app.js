@@ -73,11 +73,14 @@ function generateHTML(list){
 }
 
 function getLanguages(data) {
-   data.map( language => {
-      console.log(language);
+   
+   const dataList = data.map( language => {
+      
       return `<li>${language}</li>`;
       
    });
+
+   return dataList;
 }
 
 getJobPosts();

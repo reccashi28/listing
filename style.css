@@ -107,4 +107,44 @@ main .container .job-posts {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+
+main .container .job-posts .logo {
+  margin-right: 2em;
+}
+
+main .container .job-posts .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .job-posts .status span {
+  padding: 0 10px;
+}
+
+main .container .job-posts .details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .job-posts .details ul li {
+  list-style-type: none;
+  margin: 0 20px 0 0;
+}
+
+main .container .job-posts .languages {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main .container .job-posts .languages ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .job-posts .languages ul li {
+  list-style-type: none;
+}
 /*# sourceMappingURL=style.css.map */

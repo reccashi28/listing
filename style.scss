@@ -106,6 +106,43 @@ main {
             border-left: 3px solid $primaryBgColor;
             border-bottom-left-radius: 5px;
             border-top-left-radius: 5px;
+
+            .logo {
+                margin-right: 2em;
+            }
+
+            .status {
+                display: flex;
+
+                span {
+                    padding: 0 10px;
+                }
+            }
+
+            .details {
+
+                ul {
+                    display: flex;
+
+                    li {
+                        list-style-type: none;
+                        margin: 0 20px 0 0;
+                    }
+                }
+                
+            }
+
+            .languages {
+
+                align-self: flex-end;
+                ul {
+                    display: flex;
+
+                    li {
+                        list-style-type: none;
+                    }
+                }
+            }
             
         }
 
