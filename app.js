@@ -45,10 +45,10 @@ function generateHTML(list){
         <div class="content">
           <div class="status">
             <p>${listPost.company}</p>
-            <span>${listPost.new ? 'New': ''}</span>
-            <span>${listPost.featured ? 'Featured': ''}</span>
+            <span class="postNew">${listPost.new ? 'New': ''}</span>
+            <span class="postFeature">${listPost.featured ? 'Featured': ''}</span>
           </div>
-          <p>${listPost.position}</p>
+          <p class ="company-name">${listPost.position}</p>
           <div class="details">
             <ul>
                <li>${listPost.postedAt}</li>
@@ -73,13 +73,10 @@ function generateHTML(list){
 }
 
 function getLanguages(data) {
-   
-   const dataList = data.map( language => {
-      
-      return `<li>${language}</li>`;
-      
+   const dataList = data.map( language => {      
+      return `<li>${language}</li>`;      
    });
-
+console.log(dataList);
    return dataList;
 }
 

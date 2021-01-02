@@ -14,6 +14,8 @@ $height: 70px;
 body {
     color: white;
     background-color: $lightBgColor;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
 }
 
 header {
@@ -101,6 +103,7 @@ main {
             width: 100%;
             margin: 20px auto;
             display: flex;
+            flex-direction: row;
             background-color: white;
             padding: 10px;
             border-left: 3px solid $primaryBgColor;
@@ -110,37 +113,84 @@ main {
             .logo {
                 margin-right: 2em;
             }
-
-            .status {
-                display: flex;
-
-                span {
-                    padding: 0 10px;
-                }
-            }
-
             .details {
+                color: rgba(0, 0, 0, 0.4);
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
 
-                ul {
-                    display: flex;
+                .company-name{
+                    font-size: 20px;
+                    cursor: pointer;
+                    margin: 10px 0;
 
-                    li {
-                        list-style-type: none;
-                        margin: 0 20px 0 0;
+                    &:hover{
+                        color: $primaryBgColor;
+
                     }
                 }
-                
+
+                .status {
+                    display: flex;
+                    .postFeature {
+                        background-color: black;
+                        
+                        
+                    }
+                    .postNew {
+                        background-color: $primaryBgColor;
+                    }
+                    p {
+                        color: $primaryBgColor;
+                        font-weight: 300;
+                    }
+                    
+
+                    span {
+                        padding: 3px 10px;
+                        margin: 0 10px;
+                        border-radius: 10px;
+                        color: white;
+                    }
+                }
+
+                .details {
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            list-style-type: none;
+                            margin: 0 20px 0 0;
+                        }
+                    }
+                    
+                }
             }
 
             .languages {
-
-                align-self: flex-end;
+                display: flex;
+                margin-left: auto;
+                align-items: center;
+                justify-content: center;
                 ul {
                     display: flex;
 
                     li {
                         list-style-type: none;
                         margin-right: 20px;
+                        background-color: $lightBgColor;
+                        padding: 5px;
+                        cursor: pointer;
+                        color: $primaryBgColor;
+                        border-radius: 5px;
+
+                        &:hover {
+                            color: white;
+                            background-color: $primaryBgColor;
+                        }
                     }
                 }
             }

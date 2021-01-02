@@ -8,6 +8,8 @@
 body {
   color: white;
   background-color: #effafa;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
 }
 
 header {
@@ -101,6 +103,10 @@ main .container .job-posts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: white;
   padding: 10px;
   border-left: 3px solid #5ba4a4;
@@ -112,30 +118,80 @@ main .container .job-posts .logo {
   margin-right: 2em;
 }
 
-main .container .job-posts .status {
+main .container .job-posts .details {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+main .container .job-posts .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .container .job-posts .content .company-name {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+main .container .job-posts .content .company-name:hover {
+  color: #5ba4a4;
+}
+
+main .container .job-posts .content .status {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .job-posts .status span {
-  padding: 0 10px;
+main .container .job-posts .content .status .postFeature {
+  background-color: black;
 }
 
-main .container .job-posts .details ul {
+main .container .job-posts .content .status .postNew {
+  background-color: #5ba4a4;
+}
+
+main .container .job-posts .content .status p {
+  color: #5ba4a4;
+  font-weight: 300;
+}
+
+main .container .job-posts .content .status span {
+  padding: 3px 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+main .container .job-posts .content .details ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .job-posts .details ul li {
+main .container .job-posts .content .details ul li {
   list-style-type: none;
   margin: 0 20px 0 0;
 }
 
 main .container .job-posts .languages {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .container .job-posts .languages ul {
@@ -147,5 +203,15 @@ main .container .job-posts .languages ul {
 main .container .job-posts .languages ul li {
   list-style-type: none;
   margin-right: 20px;
+  background-color: #effafa;
+  padding: 5px;
+  cursor: pointer;
+  color: #5ba4a4;
+  border-radius: 5px;
+}
+
+main .container .job-posts .languages ul li:hover {
+  color: white;
+  background-color: #5ba4a4;
 }
 /*# sourceMappingURL=style.css.map */
