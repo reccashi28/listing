@@ -72,6 +72,14 @@ function generateHTML(list){
 
 }
 
+// function getLanguages(data) {
+//    let ul = document.createElement('UL');
+//    let level = document.createElement('LI');
+//    level.innerHTML = data.role;
+//    ul.appendChild(level);
+
+//    return ul;
+// }
 function getLanguages(data) {
    const dataList = data.map( language => {      
       return `<li>${language}</li>`;      
