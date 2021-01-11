@@ -75,28 +75,6 @@ main .container .job-filter {
           align-items: center;
 }
 
-main .container .job-filter .filterbox-content {
-  margin: 5px 10px;
-  background-color: #ddeeee;
-  height: 100%;
-}
-
-main .container .job-filter .filterbox-content span {
-  margin: 5px;
-}
-
-main .container .job-filter .filterbox-content .fa-times {
-  background-color: #5ba4a4;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  height: 100%;
-}
-
-main .container .job-filter .filterbox-content .fa-times:hover {
-  background-color: darkgreen;
-}
-
 main .container .job-posts {
   width: 100%;
   margin: 20px auto;

@@ -71,32 +71,6 @@ main {
             align-items: center;
             // display: none;
             
-       
-            .filterbox-content{
-                margin: 5px 10px;
-                background-color: $filter-tablets;
-                height: 100%;
-
-                span {
-                    // height: auto;
-                    margin: 5px;
-                    // background-color: darkgreen;
-                }
-
-                .fa-times {
-                    // height: auto;
-                    background-color: $primaryBgColor;
-                    color: white;
-                    padding: 5px 10px;
-                    cursor: pointer;
-                    height: 100%;
-                    
-                    &:hover {
-                        background-color: darkgreen;
-                    }
-                }
-
-            }
         }      
     
         .job-posts{
