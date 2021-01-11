@@ -135,7 +135,7 @@ main .container .job-posts .content {
 }
 
 main .container .job-posts .content .company-name {
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   margin: 10px 0;
 }
@@ -181,6 +181,7 @@ main .container .job-posts .content .details ul {
 main .container .job-posts .content .details ul li {
   list-style-type: none;
   margin: 0 20px 0 0;
+  font-size: 10px;
 }
 
 main .container .job-posts .languages {

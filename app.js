@@ -15,7 +15,6 @@ emptyBox.style.height = `${emptyBoxHeight + 60}px`;
 window.addEventListener('resize', resizeBox);
 
 function getJobPosts(){
-   const htmlPost = ``;
 
   let promiseJob = fetch('http://127.0.0.1:5500/data.json');
   let promiseJob2 = promiseJob.then( response => {
@@ -25,6 +24,7 @@ function getJobPosts(){
 
    promiseJob2.then(data => {
       generateHTML(data);
+      // filterList(data);
       
    });
    promiseJob2.catch( error => {
@@ -33,9 +33,19 @@ function getJobPosts(){
 
 }
 
+function filterList(data) {
+      const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
+
+   return filterArray;
+}
+
 function generateHTML(list){
+
    let htmlJobPostBox = '';
+   // const filterTags = filterList.map( data => data);
+
    list.map( listPost => {
+      console.log(filterList(listPost));
       htmlJobPostBox = 
       `
       <div class="job-posts">
@@ -59,9 +69,7 @@ function generateHTML(list){
         </div>
         <div class="languages">
             <ul>
-               <li>${listPost.role}</li>
-               <li>${listPost.level}</li>
-               ${getLanguages(listPost.languages)}
+              
             </ul>
         </div>
       </div>
@@ -72,20 +80,6 @@ function generateHTML(list){
 
 }
 
-// function getLanguages(data) {
-//    let ul = document.createElement('UL');
-//    let level = document.createElement('LI');
-//    level.innerHTML = data.role;
-//    ul.appendChild(level);
 
-//    return ul;
-// }
-function getLanguages(data) {
-   const dataList = data.map( language => {      
-      return `<li>${language}</li>`;      
-   });
-console.log(dataList);
-   return dataList;
-}
 
 getJobPosts();
