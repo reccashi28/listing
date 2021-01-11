@@ -161,6 +161,7 @@ main .container .job-posts .content .status .postNew {
 main .container .job-posts .content .status p {
   color: #5ba4a4;
   font-weight: 300;
+  font-size: 10px;
 }
 
 main .container .job-posts .content .status span {
