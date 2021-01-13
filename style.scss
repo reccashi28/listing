@@ -70,6 +70,15 @@ main {
             flex-wrap: wrap;
             align-items: center;
             // display: none;
+
+            .searchField {
+                width: 90%;
+                margin: 0 auto;
+                border: 1px solid $primaryBgColor;
+                border-radius: 5px;
+                padding: 5px;
+                outline: none;
+            }
             
         }      
     

@@ -75,6 +75,15 @@ main .container .job-filter {
           align-items: center;
 }
 
+main .container .job-filter .searchField {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #5ba4a4;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
 main .container .job-posts {
   width: 100%;
   margin: 20px auto;
