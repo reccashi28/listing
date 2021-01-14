@@ -33,7 +33,15 @@ function getJobPosts(){
 
 }
 
-function filterList(data) {
+function filterList(data){
+   // const filter = data.map( tags => console.log('from Filterlist function', tags));
+   // return filter;
+   console.log('filterlist function', data[0]);
+}
+
+
+
+function jobTags(data) {
       const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
    return filterArray;
 }
@@ -44,8 +52,9 @@ function generateHTML(list){
    // console.log(filterList);
 
    list.map( listPost => {
-      const tagsSearch = filterList(listPost);
-      console.log(tagsSearch);
+      const tagsSearch = jobTags(listPost);
+      filterList(tagsSearch);
+      console.log('tags search',tagsSearch);
       htmlJobPostBox = 
       `
       <div class="job-posts">
