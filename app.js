@@ -1,7 +1,9 @@
 const filterBox = document.querySelector('.job-filter');
 const emptyBox = document.querySelector('.empty-box');
 const container = document.querySelector('.container');
+const searchField = document.querySelector('.searchField');
 
+// searchField.addEventListener('input', tagValue);
 
 let emptyBoxHeight = filterBox.clientHeight;
 
@@ -14,6 +16,13 @@ emptyBox.style.height = `${emptyBoxHeight + 60}px`;
 
 window.addEventListener('resize', resizeBox);
 
+//getting input value
+// function tagValue(data){
+//    let input = data.target.value;
+//    return input;
+// }
+
+//fetch data
 function getJobPosts(){
 
   let promiseJob = fetch('http://127.0.0.1:5500/data.json');
@@ -33,28 +42,25 @@ function getJobPosts(){
 
 }
 
-function filterList(data){
-   // const filter = data.map( tags => console.log('from Filterlist function', tags));
-   // return filter;
-   console.log('filterlist function', data[0]);
-}
+// function jobTags(data) {
+//    const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
+//    return filterArray;
+// }
 
-
-
-function jobTags(data) {
-      const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
-   return filterArray;
-}
-
+//generate job post html
 function generateHTML(list){
-
+  let inputValue = searchField.value;
+   console.log(inputValue);
    let htmlJobPostBox = '';
    // console.log(filterList);
-
+   // console.log(list);
    list.map( listPost => {
-      const tagsSearch = jobTags(listPost);
-      filterList(tagsSearch);
-      console.log('tags search',tagsSearch);
+     
+      // const tagsSearch = jobTags(listPost);
+      const filterArray = [listPost.role, listPost.level, ...listPost.languages, ...listPost.tools];
+      if(filterArray.includes(inputValue)){
+         console.log('i got it.');
+      }
       htmlJobPostBox = 
       `
       <div class="job-posts">
@@ -78,7 +84,7 @@ function generateHTML(list){
         </div>
         <div class="languages">
             <ul>
-              ${tagsSearch.map( tag => {
+              ${filterArray.map( tag => {
                return `<li>${tag}</li>`
               }).join('')}
             </ul>
