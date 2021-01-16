@@ -2,8 +2,14 @@ const filterBox = document.querySelector('.job-filter');
 const emptyBox = document.querySelector('.empty-box');
 const container = document.querySelector('.container');
 const searchField = document.querySelector('.searchField');
-
-// searchField.addEventListener('input', tagValue);
+let jobs = [];
+searchField.addEventListener('input', e => {
+   let input = e.target.value;
+   const filteredSearch = jobs.filter( job => {
+      return job.languages.includes(input) || job.role.includes(input) || job.tools.includes(input);
+   });
+   console.log(filteredSearch);
+});
 
 let emptyBoxHeight = filterBox.clientHeight;
 
@@ -16,51 +22,41 @@ emptyBox.style.height = `${emptyBoxHeight + 60}px`;
 
 window.addEventListener('resize', resizeBox);
 
-//getting input value
-// function tagValue(data){
-//    let input = data.target.value;
-//    return input;
-// }
-
-//fetch data
-function getJobPosts(){
-
-  let promiseJob = fetch('http://127.0.0.1:5500/data.json');
-  let promiseJob2 = promiseJob.then( response => {
-      return response.json();
-   });
-   // console.log(promiseJob2);
-
-   promiseJob2.then(data => {
-      generateHTML(data);
-      // filterList(data);
-      
-   });
-   promiseJob2.catch( error => {
-      console.log('Failed to fetch page: ', err)
-   })
+const getJobPosts = async () => {
+   try {
+      const res = await fetch('http://127.0.0.1:5500/data.json');
+      jobs = await res.json();
+      // console.log(jobs);
+      generateHTML(jobs);
+   } catch (error) {
+      console.log(error);
+   }
 
 }
 
-// function jobTags(data) {
-//    const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
-//    return filterArray;
-// }
+const jobTags = data => {
+   let tagArray = [];
+   const filterArray = [data.role, data.level, ...data.languages, ...data.tools];
+   filterArray.map( aray => {
+      if(!tagArray.includes(aray)){
+         return tagArray.push(aray)
+      }
+   });
+   // console.log(tagArray);
+   const array = filterArray.join(' ').split(' ');  
+   // console.log('array',array);
+}
+
+// console.log(jobTags);
 
 //generate job post html
 function generateHTML(list){
-  let inputValue = searchField.value;
-   console.log(inputValue);
    let htmlJobPostBox = '';
-   // console.log(filterList);
-   // console.log(list);
    list.map( listPost => {
-     
+     jobTags(listPost);
       // const tagsSearch = jobTags(listPost);
       const filterArray = [listPost.role, listPost.level, ...listPost.languages, ...listPost.tools];
-      if(filterArray.includes(inputValue)){
-         console.log('i got it.');
-      }
+
       htmlJobPostBox = 
       `
       <div class="job-posts">
