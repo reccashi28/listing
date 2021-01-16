@@ -7,4 +7,14 @@
     font-size: 40px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .languages {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
 /*# sourceMappingURL=mq.css.map */

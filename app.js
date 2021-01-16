@@ -61,28 +61,31 @@ const generateHTML = list =>{
         <div class="logo">
           <img src="${listPost.logo}">
         </div>
-        <div class="content">
-          <div class="status">
-            <p>${listPost.company}</p>
-            <span class="postNew">${listPost.new ? 'NEW': ''}</span>
-            <span class="postFeature">${listPost.featured ? 'FEATURED': ''}</span>
-          </div>
-          <p class ="company-name">${listPost.position}</p>
-          <div class="details">
-            <ul>
-               <li>${listPost.postedAt}</li>
-               <li>${listPost.contract}</li>
-               <li>${listPost.location}</li>
-            </ul>
-          </div>
-        </div>
-        <div class="languages">
-            <ul>
-              ${filterArray.map( tag => {
-               return `<li>${tag}</li>`
-              }).join('')}
-            </ul>
-        </div>
+        <div class="content-body">
+            <div class="content">
+               <div class="status">
+                  <p>${listPost.company}</p>
+                  <span class="postNew">${listPost.new ? 'NEW': ''}</span>
+                  <span class="postFeature">${listPost.featured ? 'FEATURED': ''}</span>
+               </div>
+               <p class ="company-name">${listPost.position}</p>
+            
+            </div>
+            <div class="languages">
+                  <ul>
+                  ${filterArray.map( tag => {
+                     return `<li>${tag}</li>`
+                  }).join('')}
+                  </ul>
+            </div>
+            <div class="details">
+                  <ul>
+                     <li>${listPost.postedAt}</li>
+                     <li>${listPost.contract}</li>
+                     <li>${listPost.location}</li>
+                  </ul>
+               </div>
+         </div>
       </div>
       
       `

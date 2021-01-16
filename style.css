@@ -16,7 +16,6 @@ header {
   background-color: #5ba4a4;
   position: relative;
   min-height: 25vh;
-  height: auto;
   background-image: url("/images/bg-header-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,9 +27,10 @@ header .header-name {
   position: absolute;
   left: 50%;
   top: 40%;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 25px;
+  text-align: center;
 }
 
 nav {
@@ -38,7 +38,7 @@ nav {
 }
 
 nav .container {
-  width: 90%;
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
 }
@@ -53,8 +53,8 @@ nav .container .job-filter {
   padding: 10px;
   left: 50%;
   top: -3%;
-  -webkit-transform: translate(-50%, -20%);
-          transform: translate(-50%, -20%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
           box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
   border-radius: 5px;
@@ -105,21 +105,34 @@ main .container1 .job-posts {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: white;
-  padding: 10px;
+  padding: 5px;
   border-left: 3px solid #5ba4a4;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+  position: relative;
 }
 
 main .container1 .job-posts .logo {
-  margin-right: 2em;
+  margin-right: 0.5em;
 }
 
-main .container1 .job-posts .details {
+main .container1 .job-posts .content-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container1 .job-posts .content-body .details {
   color: rgba(0, 0, 0, 0.4);
 }
 
-main .container1 .job-posts .content {
+main .container1 .job-posts .content-body .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,39 +142,41 @@ main .container1 .job-posts .content {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-main .container1 .job-posts .content .company-name {
+main .container1 .job-posts .content-body .content .company-name {
   font-size: 15px;
   cursor: pointer;
   margin: 10px 0;
 }
 
-main .container1 .job-posts .content .company-name:hover {
+main .container1 .job-posts .content-body .content .company-name:hover {
   color: #5ba4a4;
 }
 
-main .container1 .job-posts .content .status {
+main .container1 .job-posts .content-body .content .status {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container1 .job-posts .content .status .postFeature {
+main .container1 .job-posts .content-body .content .status .postFeature {
   background-color: black;
 }
 
-main .container1 .job-posts .content .status .postNew {
+main .container1 .job-posts .content-body .content .status .postNew {
   background-color: #5ba4a4;
 }
 
-main .container1 .job-posts .content .status p {
+main .container1 .job-posts .content-body .content .status p {
   color: #5ba4a4;
   font-weight: 300;
   font-size: 10px;
 }
 
-main .container1 .job-posts .content .status span {
+main .container1 .job-posts .content-body .content .status span {
   text-align: center;
   padding: 5px 10px;
   margin: 0 10px;
@@ -170,49 +185,58 @@ main .container1 .job-posts .content .status span {
   font-size: 10px;
 }
 
-main .container1 .job-posts .content .details ul {
+main .container1 .job-posts .content-body .languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-main .container1 .job-posts .content .details ul li {
-  list-style-type: none;
-  margin: 0 20px 0 0;
-  font-size: 10px;
-}
-
-main .container1 .job-posts .languages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 10px;
 }
 
-main .container1 .job-posts .languages ul {
+main .container1 .job-posts .content-body .languages ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-main .container1 .job-posts .languages ul li {
+main .container1 .job-posts .content-body .languages ul li {
   list-style-type: none;
   margin-right: 20px;
   background-color: #effafa;
   padding: 5px;
+  margin: 5px;
   cursor: pointer;
   color: #5ba4a4;
   border-radius: 5px;
 }
 
-main .container1 .job-posts .languages ul li:hover {
+main .container1 .job-posts .content-body .languages ul li:hover {
   color: white;
   background-color: #5ba4a4;
+}
+
+main .container1 .job-posts .content-body .details {
+  position: absolute;
+  left: 100px;
+  bottom: 2px;
+}
+
+main .container1 .job-posts .content-body .details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container1 .job-posts .content-body .details ul li {
+  list-style-type: none;
+  margin: 0 20px 0 0;
+  font-size: 10px;
 }
 /*# sourceMappingURL=style.css.map */
