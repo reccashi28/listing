@@ -1,19 +1,21 @@
 const filterBox = document.querySelector('.job-filter');
 const emptyBox = document.querySelector('.empty-box');
-const container = document.querySelector('.container');
+const container = document.querySelector('.container1');
 const searchField = document.querySelector('.searchField');
 let jobs = [];
 searchField.addEventListener('input', e => {
    let input = e.target.value;
    const filteredSearch = jobs.filter( job => {
-      return job.languages.includes(input) || job.role.includes(input) || job.tools.includes(input);
+      const languages = job.languages.map( lang => lang.toLowerCase());
+      const tools = job.tools.map( tool => tool.toLowerCase());
+      return job.role.toLowerCase().includes(input)|| languages.includes(input) || tools.includes(input) || job.level.toLowerCase().includes(input);
    });
-   console.log(filteredSearch);
+   generateHTML(filteredSearch);
 });
 
 let emptyBoxHeight = filterBox.clientHeight;
 
-emptyBox.style.height = `${emptyBoxHeight + 60}px`;
+emptyBox.style.height = `${emptyBoxHeight}px`;
 
  const resizeBox = () => {
     emptyBoxHeight = filterBox.clientHeight;
@@ -26,8 +28,8 @@ const getJobPosts = async () => {
    try {
       const res = await fetch('http://127.0.0.1:5500/data.json');
       jobs = await res.json();
-      // console.log(jobs);
       generateHTML(jobs);
+      // console.log(jobs);
    } catch (error) {
       console.log(error);
    }
@@ -50,15 +52,11 @@ const jobTags = data => {
 // console.log(jobTags);
 
 //generate job post html
-function generateHTML(list){
-   let htmlJobPostBox = '';
-   list.map( listPost => {
-     jobTags(listPost);
-      // const tagsSearch = jobTags(listPost);
+const generateHTML = list =>{
+   let htmlJobPostBox =  list.map( listPost => {
       const filterArray = [listPost.role, listPost.level, ...listPost.languages, ...listPost.tools];
 
-      htmlJobPostBox = 
-      `
+      return `
       <div class="job-posts">
         <div class="logo">
           <img src="${listPost.logo}">
@@ -88,10 +86,9 @@ function generateHTML(list){
       </div>
       
       `
-      container.insertAdjacentHTML('beforeend', htmlJobPostBox);
-   })
-
-}
+   }).join('');
+   container.innerHTML = htmlJobPostBox;
+};
 
 
 

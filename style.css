@@ -33,20 +33,17 @@ header .header-name {
   font-size: 25px;
 }
 
-main {
+nav {
   position: relative;
-  height: auto;
-  color: black;
-  width: 100%;
 }
 
-main .container {
+nav .container {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
 }
 
-main .container .job-filter {
+nav .container .job-filter {
   min-width: 300px;
   min-height: 70px;
   height: auto;
@@ -56,8 +53,8 @@ main .container .job-filter {
   padding: 10px;
   left: 50%;
   top: -3%;
-  -webkit-transform: translate(-50%, -3%);
-          transform: translate(-50%, -3%);
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
   -webkit-box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
           box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.21);
   border-radius: 5px;
@@ -75,7 +72,7 @@ main .container .job-filter {
           align-items: center;
 }
 
-main .container .job-filter .searchField {
+nav .container .job-filter .searchField {
   width: 90%;
   margin: 0 auto;
   border: 1px solid #5ba4a4;
@@ -84,7 +81,20 @@ main .container .job-filter .searchField {
   outline: none;
 }
 
-main .container .job-posts {
+main {
+  position: relative;
+  height: auto;
+  color: black;
+  width: 100%;
+}
+
+main .container1 {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+main .container1 .job-posts {
   width: 100%;
   margin: 20px auto;
   display: -webkit-box;
@@ -101,15 +111,15 @@ main .container .job-posts {
   border-top-left-radius: 5px;
 }
 
-main .container .job-posts .logo {
+main .container1 .job-posts .logo {
   margin-right: 2em;
 }
 
-main .container .job-posts .details {
+main .container1 .job-posts .details {
   color: rgba(0, 0, 0, 0.4);
 }
 
-main .container .job-posts .content {
+main .container1 .job-posts .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,37 +131,37 @@ main .container .job-posts .content {
       justify-content: space-around;
 }
 
-main .container .job-posts .content .company-name {
+main .container1 .job-posts .content .company-name {
   font-size: 15px;
   cursor: pointer;
   margin: 10px 0;
 }
 
-main .container .job-posts .content .company-name:hover {
+main .container1 .job-posts .content .company-name:hover {
   color: #5ba4a4;
 }
 
-main .container .job-posts .content .status {
+main .container1 .job-posts .content .status {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .job-posts .content .status .postFeature {
+main .container1 .job-posts .content .status .postFeature {
   background-color: black;
 }
 
-main .container .job-posts .content .status .postNew {
+main .container1 .job-posts .content .status .postNew {
   background-color: #5ba4a4;
 }
 
-main .container .job-posts .content .status p {
+main .container1 .job-posts .content .status p {
   color: #5ba4a4;
   font-weight: 300;
   font-size: 10px;
 }
 
-main .container .job-posts .content .status span {
+main .container1 .job-posts .content .status span {
   text-align: center;
   padding: 5px 10px;
   margin: 0 10px;
@@ -160,19 +170,19 @@ main .container .job-posts .content .status span {
   font-size: 10px;
 }
 
-main .container .job-posts .content .details ul {
+main .container1 .job-posts .content .details ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .job-posts .content .details ul li {
+main .container1 .job-posts .content .details ul li {
   list-style-type: none;
   margin: 0 20px 0 0;
   font-size: 10px;
 }
 
-main .container .job-posts .languages {
+main .container1 .job-posts .languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,13 +195,13 @@ main .container .job-posts .languages {
           justify-content: center;
 }
 
-main .container .job-posts .languages ul {
+main .container1 .job-posts .languages ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .job-posts .languages ul li {
+main .container1 .job-posts .languages ul li {
   list-style-type: none;
   margin-right: 20px;
   background-color: #effafa;
@@ -201,7 +211,7 @@ main .container .job-posts .languages ul li {
   border-radius: 5px;
 }
 
-main .container .job-posts .languages ul li:hover {
+main .container1 .job-posts .languages ul li:hover {
   color: white;
   background-color: #5ba4a4;
 }

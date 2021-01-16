@@ -37,13 +37,8 @@ header {
         font-size: 25px;
     }
 }
-
-main {
+nav {
     position: relative;
-    height: auto;
-    color: black;
-    width: 100%;
-  
 
     .container {
         width: 90%;
@@ -62,11 +57,11 @@ main {
             padding: 10px;
             left: 50%;
             top: -3%;
-            transform: translate(-50%, -3%);
+            transform: translate(-50%, -20%);
             box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.21);
             border-radius: 5px;
             display: flex;
-            flex-direction: row;
+            flex-direction: row ;
             flex-wrap: wrap;
             align-items: center;
             // display: none;
@@ -81,6 +76,19 @@ main {
             }
             
         }      
+
+    }
+}
+main {
+    position: relative;
+    height: auto;
+    color: black;
+    width: 100%;
+   
+    .container1 {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0 auto;
     
         .job-posts{
             width: 100%;
