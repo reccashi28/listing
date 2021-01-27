@@ -3,6 +3,7 @@ const emptyBox = document.querySelector('.empty-box');
 const container = document.querySelector('.container1');
 const searchField = document.querySelector('.searchField');
 let jobs = [];
+
 searchField.addEventListener('input', e => {
    let input = e.target.value;
    const filteredSearch = jobs.filter( job => {
@@ -26,12 +27,12 @@ window.addEventListener('resize', resizeBox);
 
 const getJobPosts = async () => {
    try {
-      const res = await fetch('http://127.0.0.1:5500/data.json');
+      const res = await fetch('data.json');
       jobs = await res.json();
       generateHTML(jobs);
       // console.log(jobs);
    } catch (error) {
-      console.log(error);
+      alert('Problem Fetching data');
    }
 
 }
