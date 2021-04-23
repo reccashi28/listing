@@ -66,8 +66,8 @@ const generateHTML = list =>{
             <div class="content">
                <div class="status">
                   <p>${listPost.company}</p>
-                  <span class="postNew">${listPost.new ? 'NEW': ''}</span>
-                  <span class="postFeature">${listPost.featured ? 'FEATURED': ''}</span>
+                  ${listPost.new ? '<span class="postNew">New</span>': ""}
+                  ${listPost.featured ? '<span class="postFeature">FEATURED</span>': ''}
                </div>
                <p class ="company-name">${listPost.position}</p>
             
